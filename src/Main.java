@@ -22,10 +22,15 @@ public class Main {
         System.out.println ("Digite o valor do lado 3: ");
         l3=input.nextInt();
         
-        if (l1<l2+l3) {System.out.println ("É triangulo");}
-        else if (l2<l1+l3) {System.out.println ("É triangulo");}
-        else if (l3<l2+l1) {System.out.println ("É triangulo");}
-        
+        if (l1<l2+l3)
+        	if (l2<l1+l3)
+        		if (l3<l1+l2) 
+        			System.out.println("triangulo válido");
+        		else System.out.println("Triangulo invalido");
+        	else System.out.println("triangulo invalido");
+        else System.out.println("triangulo invalido");
+        		
+        		
        input.close();
 	}
 
